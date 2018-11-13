@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/ivovanderzee/QueueTime-iOS/QueueTime/QueueTime/signUpViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:QueueTime.xcodeproj">
    </FileRef>
    <FileRef

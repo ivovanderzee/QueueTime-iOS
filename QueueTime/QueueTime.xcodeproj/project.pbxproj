@@ -12,6 +12,8 @@
 		72361216219AE48E00FD832B /* locationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72361215219AE48E00FD832B /* locationViewController.swift */; };
 		BF1402EFDF2618BF41B5F010 /* Pods_QueueTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */; };
 		C2288601219AD14800537767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2288600219AD14800537767 /* GoogleService-Info.plist */; };
+		C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */; };
+		C22C28A4219AFDF300C3F800 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C28A3219AFDF300C3F800 /* loginViewController.swift */; };
 		C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA02A2191C124006BBE2D /* AppDelegate.swift */; };
 		C23FA02D2191C124006BBE2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA02C2191C124006BBE2D /* ViewController.swift */; };
 		C23FA0302191C124006BBE2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23FA02E2191C124006BBE2D /* Main.storyboard */; };
@@ -47,6 +49,8 @@
 		72361215219AE48E00FD832B /* locationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = locationViewController.swift; path = ../locationViewController.swift; sourceTree = "<group>"; };
 		B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2288600219AD14800537767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = signUpViewController.swift; path = "/Users/ivovanderzee/QueueTime-iOS/QueueTime/QueueTime/signUpViewController.swift"; sourceTree = "<absolute>"; };
+		C22C28A3219AFDF300C3F800 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		C23FA0272191C124006BBE2D /* QueueTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23FA02A2191C124006BBE2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C23FA02C2191C124006BBE2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -141,10 +145,12 @@
 		C23FA0292191C124006BBE2D /* QueueTime */ = {
 			isa = PBXGroup;
 			children = (
+				C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */,
 				72361215219AE48E00FD832B /* locationViewController.swift */,
 				C23FA02A2191C124006BBE2D /* AppDelegate.swift */,
 				C23FA02C2191C124006BBE2D /* ViewController.swift */,
 				C23FA02E2191C124006BBE2D /* Main.storyboard */,
+				C22C28A3219AFDF300C3F800 /* loginViewController.swift */,
 				C2288600219AD14800537767 /* GoogleService-Info.plist */,
 				C23FA0312191C124006BBE2D /* Assets.xcassets */,
 				C23FA0332191C124006BBE2D /* LaunchScreen.storyboard */,
@@ -404,7 +410,9 @@
 			files = (
 				72361216219AE48E00FD832B /* locationViewController.swift in Sources */,
 				C23FA02D2191C124006BBE2D /* ViewController.swift in Sources */,
+				C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */,
 				C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */,
+				C22C28A4219AFDF300C3F800 /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
