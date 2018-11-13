@@ -6,6 +6,7 @@ target 'QueueTime' do
   use_frameworks!
 
   # Pods for QueueTime
+    pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
   target 'QueueTimeTests' do
