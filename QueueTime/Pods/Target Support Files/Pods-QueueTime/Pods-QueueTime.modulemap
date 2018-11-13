@@ -1,0 +1,6 @@
+framework module Pods_QueueTime {
+  umbrella header "Pods-QueueTime-umbrella.h"
+
+  export *
+  module * { export * }
+}

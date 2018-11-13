@@ -1,0 +1,6 @@
+framework module Pods_QueueTimeTests {
+  umbrella header "Pods-QueueTimeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

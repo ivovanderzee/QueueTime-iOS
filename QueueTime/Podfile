@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'QueueTime' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for QueueTime
+	pod 'Firebase/Core'
+	pod 'Firebase/Auth'
+  target 'QueueTimeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'QueueTimeUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
