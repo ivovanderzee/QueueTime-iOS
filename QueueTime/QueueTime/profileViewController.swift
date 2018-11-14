@@ -23,6 +23,15 @@ class profileViewController: UIViewController {
         
         var refArtists: DatabaseReference!
         
+        func viewDidLoad() {
+            super.viewDidLoad()
+            // Voer een extra installatie uit nadat de weergave is geladen, meestal vanaf een punt.
+            
+            FirebaseApp.configure()
+            
+            // Een verwijzing naar de knooppuntartiesten krijgen
+            refArtists = Database.database().reference().child("artists");
+        
         func addInfo(){
             
             let key = refArtists.childByAutoId().key
