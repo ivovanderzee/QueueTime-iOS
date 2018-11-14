@@ -10,11 +10,6 @@
 		3FE7DE0744B8BC5C8FF8597C /* Pods_QueueTimeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB0924D76DCDA11294977F2 /* Pods_QueueTimeUITests.framework */; };
 		4AA5DB938B6959140A9AE6A8 /* Pods_QueueTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */; };
 		60C3BE15219C175500D93CC1 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3BE14219C175500D93CC1 /* profileViewController.swift */; };
-		7205BE1D219B1ABD00206AAE /* GFBase32Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205BE12219B1ABD00206AAE /* GFBase32Utils.m */; };
-		7205BE1E219B1ABD00206AAE /* GeoFire.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205BE14219B1ABD00206AAE /* GeoFire.m */; };
-		7205BE1F219B1ABD00206AAE /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205BE15219B1ABD00206AAE /* GFGeoHashQuery.m */; };
-		7205BE20219B1ABD00206AAE /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205BE16219B1ABD00206AAE /* GFQuery.m */; };
-		7205BE21219B1ABD00206AAE /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205BE17219B1ABD00206AAE /* GFGeoHash.m */; };
 		72361216219AE48E00FD832B /* locationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72361215219AE48E00FD832B /* locationViewController.swift */; };
 		BF1402EFDF2618BF41B5F010 /* Pods_QueueTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */; };
 		C2288601219AD14800537767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2288600219AD14800537767 /* GoogleService-Info.plist */; };
@@ -53,25 +48,10 @@
 		254F9171F152CA76E1B64B34 /* Pods-QueueTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueueTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QueueTime/Pods-QueueTime.debug.xcconfig"; sourceTree = "<group>"; };
 		4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C3BE14219C175500D93CC1 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
-		7205BE0C219B1ABD00206AAE /* GeoFire-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire-Prefix.pch"; sourceTree = "<group>"; };
-		7205BE0E219B1ABD00206AAE /* GFBase32Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFBase32Utils.h; sourceTree = "<group>"; };
-		7205BE0F219B1ABD00206AAE /* GFGeoHashQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHashQuery.h; sourceTree = "<group>"; };
-		7205BE10219B1ABD00206AAE /* GFGeoHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFGeoHash.h; sourceTree = "<group>"; };
-		7205BE11219B1ABD00206AAE /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
-		7205BE12219B1ABD00206AAE /* GFBase32Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFBase32Utils.m; sourceTree = "<group>"; };
-		7205BE13219B1ABD00206AAE /* GeoFire+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GeoFire+Private.h"; sourceTree = "<group>"; };
-		7205BE14219B1ABD00206AAE /* GeoFire.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoFire.m; sourceTree = "<group>"; };
-		7205BE15219B1ABD00206AAE /* GFGeoHashQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHashQuery.m; sourceTree = "<group>"; };
-		7205BE16219B1ABD00206AAE /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
-		7205BE17219B1ABD00206AAE /* GFGeoHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFGeoHash.m; sourceTree = "<group>"; };
-		7205BE19219B1ABD00206AAE /* GFRegionQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRegionQuery.h; sourceTree = "<group>"; };
-		7205BE1A219B1ABD00206AAE /* GeoFire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoFire.h; sourceTree = "<group>"; };
-		7205BE1B219B1ABD00206AAE /* GFQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFQuery.h; sourceTree = "<group>"; };
-		7205BE1C219B1ABD00206AAE /* GFCircleQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCircleQuery.h; sourceTree = "<group>"; };
 		72361215219AE48E00FD832B /* locationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = locationViewController.swift; path = ../locationViewController.swift; sourceTree = "<group>"; };
 		B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2288600219AD14800537767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = signUpViewController.swift; path = "/Users/Xandor/QueueTime-iOS/QueueTime/QueueTime/signUpViewController.swift"; sourceTree = "<absolute>"; };
+		C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = signUpViewController.swift; path = "/Users/TimvanderZee/QueueTime-iOS/QueueTime/QueueTime/signUpViewController.swift"; sourceTree = "<absolute>"; };
 		C22C28A3219AFDF300C3F800 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		C23FA0272191C124006BBE2D /* QueueTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23FA02A2191C124006BBE2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,44 +122,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		7205BE0B219B1ABD00206AAE /* GeoFire */ = {
-			isa = PBXGroup;
-			children = (
-				7205BE0C219B1ABD00206AAE /* GeoFire-Prefix.pch */,
-				7205BE0D219B1ABD00206AAE /* Implementation */,
-				7205BE18219B1ABD00206AAE /* API */,
-			);
-			path = GeoFire;
-			sourceTree = SOURCE_ROOT;
-		};
-		7205BE0D219B1ABD00206AAE /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				7205BE0E219B1ABD00206AAE /* GFBase32Utils.h */,
-				7205BE0F219B1ABD00206AAE /* GFGeoHashQuery.h */,
-				7205BE10219B1ABD00206AAE /* GFGeoHash.h */,
-				7205BE11219B1ABD00206AAE /* GFQuery+Private.h */,
-				7205BE12219B1ABD00206AAE /* GFBase32Utils.m */,
-				7205BE13219B1ABD00206AAE /* GeoFire+Private.h */,
-				7205BE14219B1ABD00206AAE /* GeoFire.m */,
-				7205BE15219B1ABD00206AAE /* GFGeoHashQuery.m */,
-				7205BE16219B1ABD00206AAE /* GFQuery.m */,
-				7205BE17219B1ABD00206AAE /* GFGeoHash.m */,
-			);
-			path = Implementation;
-			sourceTree = "<group>";
-		};
-		7205BE18219B1ABD00206AAE /* API */ = {
-			isa = PBXGroup;
-			children = (
-				7205BE19219B1ABD00206AAE /* GFRegionQuery.h */,
-				7205BE1A219B1ABD00206AAE /* GeoFire.h */,
-				7205BE1B219B1ABD00206AAE /* GFQuery.h */,
-				7205BE1C219B1ABD00206AAE /* GFCircleQuery.h */,
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
 		C23FA01E2191C124006BBE2D = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +147,6 @@
 		C23FA0292191C124006BBE2D /* QueueTime */ = {
 			isa = PBXGroup;
 			children = (
-				7205BE0B219B1ABD00206AAE /* GeoFire */,
 				C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */,
 				72361215219AE48E00FD832B /* locationViewController.swift */,
 				C23FA02A2191C124006BBE2D /* AppDelegate.swift */,
@@ -474,13 +415,8 @@
 			files = (
 				72361216219AE48E00FD832B /* locationViewController.swift in Sources */,
 				C23FA02D2191C124006BBE2D /* ViewController.swift in Sources */,
-				7205BE21219B1ABD00206AAE /* GFGeoHash.m in Sources */,
-				7205BE1D219B1ABD00206AAE /* GFBase32Utils.m in Sources */,
-				7205BE1E219B1ABD00206AAE /* GeoFire.m in Sources */,
 				C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */,
 				60C3BE15219C175500D93CC1 /* profileViewController.swift in Sources */,
-				7205BE1F219B1ABD00206AAE /* GFGeoHashQuery.m in Sources */,
-				7205BE20219B1ABD00206AAE /* GFQuery.m in Sources */,
 				C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */,
 				C22C28A4219AFDF300C3F800 /* loginViewController.swift in Sources */,
 			);

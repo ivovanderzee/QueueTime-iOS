@@ -15,6 +15,7 @@
 #import "GeoFire.h"
 #import "GeoFire+Private.h"
 #import "GFGeoHashQuery.h"
+#import "GFGeoHashQuery.h"
 
 @interface GFQueryLocationInfo : NSObject
 
