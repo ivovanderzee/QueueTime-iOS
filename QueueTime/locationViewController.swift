@@ -7,7 +7,7 @@
 
 import UIKit
 import MapKit
-
+import GeoFire
 
 class locationViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -16,7 +16,7 @@ class locationViewController: UIViewController, CLLocationManagerDelegate {
     
     // Location manager
     var locationManager = CLLocationManager()
-    
+    var geoFire: GeoFire!
     
     override func viewDidLoad() {
         super.viewDidLoad()
