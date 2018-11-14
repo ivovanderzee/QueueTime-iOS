@@ -23,10 +23,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9jn-mU-eIn">
-                                        <rect key="frame" x="73" y="556" width="229" height="53"/>
+                                        <rect key="frame" x="73" y="510" width="229" height="53"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.1223278114" green="0.16131327940000001" blue="0.71073510360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Aanmelden">
+                                        <state key="normal" title="Maak account">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -75,6 +75,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6F-1j-dnf">
+                                        <rect key="frame" x="94" y="583" width="185" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Al een account? Log hier in"/>
+                                        <connections>
+                                            <segue destination="SQ6-Sr-m0N" kind="show" id="5kh-0G-Y1A"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
@@ -85,12 +93,12 @@
                     <connections>
                         <outlet property="password" destination="G5A-0S-DSu" id="oBM-as-ww3"/>
                         <outlet property="username" destination="LVS-Pt-AmG" id="pts-sC-TJQ"/>
-                        <segue destination="SQ6-Sr-m0N" kind="show" identifier="goToLogin" id="Deq-hf-v7y"/>
+                        <segue destination="SQ6-Sr-m0N" kind="show" identifier="goToLogin" id="OsL-Ld-17a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-450" y="147"/>
+            <point key="canvasLocation" x="-450.39999999999998" y="146.17691154422789"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="CFw-M0-lae">
@@ -139,7 +147,7 @@
                                 <rect key="frame" x="64" y="457" width="229" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1223278114" green="0.16131327940000001" blue="0.71073510360000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Aanmelden">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -153,6 +161,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVf-WB-our">
+                                <rect key="frame" x="74" y="563" width="226" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Nog geen account? Meld hieraan"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="MYd-q4-jhz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JZB-Re-ptk"/>
@@ -165,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oa-aR-5bL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-58" y="1054"/>
+            <point key="canvasLocation" x="-682" y="1020"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="iiZ-hB-kJ5">
@@ -267,4 +283,7 @@
             <point key="canvasLocation" x="1385" y="189"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="OsL-Ld-17a"/>
+    </inferredMetricsTieBreakers>
 </document>
