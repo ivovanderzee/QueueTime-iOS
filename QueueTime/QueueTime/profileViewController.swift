@@ -8,32 +8,73 @@
 
 import UIKit
 
-class profileViewController: UIViewController {
+import Firebase
 
+class profileViewController: UIViewController {
+    
+    //Outlets voor het loginscherm
     @IBOutlet weak var ageTextField: UITextField!
     
     @IBOutlet weak var malefemaleTextField: UITextField!
     
+    //Actie die word uitgevoerd als er op de login button word gedrukt
     @IBAction func sendinfoButton(_ sender: Any) {
         
+        
+        var refArtists: DatabaseReference!
+        
+        func addInfo(){
+            
+            let key = refArtists.childByAutoId().key
+            
+            // Info aangemaakt met bijbehoorde values.
+            let artist = ["id":key,
+                          "age": ageTextField.text! as String,
+                          "gender": malefemaleTextField.text! as String
+            ]
+            
+            // De info een unieke key meegeven, voor desbetreffende user.
+            refArtists.child(key).setValue(artist)
+            
+    
+        
+        }
+
+        
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view, typically from a nib.
+        }
+        
+        override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+            // Dispose of any resources that can be recreated.
+        }
         
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        //configuring firebase
+        FirebaseApp.configure()
+        
     }
     
+    // Do any additional setup after loading the view.
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 }
+
