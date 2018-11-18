@@ -6,6 +6,7 @@
 //  Copyright © 2018 Ivo van der Zee. All rights reserved.
 //
 
+/*
 import UIKit
 
 import Firebase
@@ -22,6 +23,8 @@ class profileViewController: UIViewController {
         
         
         var refArtists: DatabaseReference!
+        
+        
         
         func viewDidLoad() {
             super.viewDidLoad()
@@ -49,7 +52,7 @@ class profileViewController: UIViewController {
         
         }
 
-        
+
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
@@ -75,7 +78,7 @@ class profileViewController: UIViewController {
 }
 
 
-/*
+
  // MARK: - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -83,7 +86,9 @@ class profileViewController: UIViewController {
  // Get the new view controller using segue.destination.
  // Pass the selected object to the new view controller.
  }
- */
+ 
 
 }
 
+
+*/

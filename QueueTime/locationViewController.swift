@@ -14,12 +14,23 @@ class locationViewController: UIViewController, CLLocationManagerDelegate {
     // Outlet voor de kaart
     @IBOutlet weak var map: MKMapView!
     
+    
+    //Outlet voor de knop waarmee gebeld kan worden //IVO
+    @IBOutlet weak var callButtonOutlet: UIButton!
+    
+    
     // Location manager
     var locationManager = CLLocationManager()
     var geoFire: GeoFire!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        //Hier word de knop om mee te bellen in de juiste vorm gezet
+        callButtonOutlet.layer.masksToBounds = true
+        callButtonOutlet.layer.cornerRadius = 43
+        
+        
         self.locationManager.requestWhenInUseAuthorization()
         
         // If statement voor als locatie is aangezet en geaccepteerd

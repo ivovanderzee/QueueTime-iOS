@@ -15,6 +15,30 @@ class loginViewController: UIViewController {
     //Outlets voor het loginscherm
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = 99
+        profileImage.layer.borderWidth = 5
+        profileImage.layer.borderColor = UIColor.black.cgColor
+        
+        username.layer.masksToBounds = true
+        username.layer.cornerRadius = 3
+        username.layer.borderWidth = 1
+        username.layer.borderColor = UIColor.black.cgColor
+        
+        password.layer.masksToBounds = true
+        password.layer.cornerRadius = 3
+        password.layer.borderWidth = 1
+        password.layer.borderColor = UIColor.black.cgColor
+        
+        
+        
+    }
+    
     
     
     //Actie die word uitgevoerd als er op de login button word gedrukt
@@ -39,12 +63,6 @@ class loginViewController: UIViewController {
                 self.present(alert, animated: true, completion: nil)
             }
         }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
