@@ -26,7 +26,7 @@ class locationViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        //Hier word de knop om mee te bellen in de juiste vorm gezet
+        //Hier word de knop om mee te bellen in de juiste vorm gezet //IVO
         callButtonOutlet.layer.masksToBounds = true
         callButtonOutlet.layer.cornerRadius = 43
         
