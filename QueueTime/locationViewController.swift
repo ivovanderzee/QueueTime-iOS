@@ -9,6 +9,7 @@ import UIKit
 import MapKit
 import GeoFire
 
+
 class locationViewController: UIViewController, CLLocationManagerDelegate {
 
     // Outlet voor de kaart
