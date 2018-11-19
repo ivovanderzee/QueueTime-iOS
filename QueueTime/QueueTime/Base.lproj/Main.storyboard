@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SEW-gL-6Ii">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hdE-3X-VzH">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +13,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="signUpViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zuP-Fn-r3x"/>
+                        <viewControllerLayoutGuide type="bottom" id="dFu-lK-d6y"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +91,6 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="password" destination="G5A-0S-DSu" id="oBM-as-ww3"/>
@@ -104,6 +106,10 @@
         <scene sceneID="CFw-M0-lae">
             <objects>
                 <viewController id="SQ6-Sr-m0N" customClass="loginViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FfQ-ei-1fH"/>
+                        <viewControllerLayoutGuide type="bottom" id="N9p-SI-L9P"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2J1-Bk-GCc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -151,7 +157,6 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="JZB-Re-ptk"/>
                     </view>
                     <connections>
                         <outlet property="password" destination="egY-EG-8y4" id="aXo-BC-EDD"/>
@@ -168,6 +173,10 @@
         <scene sceneID="iiZ-hB-kJ5">
             <objects>
                 <viewController id="SEW-gL-6Ii" customClass="profileViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQ4-eO-LPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fve-Ng-1KU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qJR-fr-Jy2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +229,6 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="1H9-Hb-umy"/>
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="yZD-sn-0UT" id="Mve-2G-4l9"/>
@@ -235,6 +243,10 @@
         <scene sceneID="mUz-t6-Zo0">
             <objects>
                 <viewController id="hdE-3X-VzH" customClass="locationViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5QR-n6-jhP"/>
+                        <viewControllerLayoutGuide type="bottom" id="cHF-wW-dGf"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LAy-qt-J0n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,30 +257,51 @@
                                     <outlet property="delegate" destination="hdE-3X-VzH" id="4GA-4F-SWe"/>
                                 </connections>
                             </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t6D-Q7-UQe">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ys-3E-ci6">
+                                <rect key="frame" x="8" y="561" width="86" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="27x-oK-hf2"/>
+                                    <constraint firstAttribute="height" constant="86" id="Ozz-Tl-Opr"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="icon Phone"/>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5U-a2-eSj">
+                                <rect key="frame" x="102" y="561" width="257" height="86"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ys-3E-ci6">
-                                        <rect key="frame" x="16" y="531" width="86" height="86"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="icon Phone"/>
-                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kg6-EQ-mdh">
+                                        <rect key="frame" x="35" y="8" width="186" height="70"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Kg6-EQ-mdh" firstAttribute="leading" secondItem="D5U-a2-eSj" secondAttribute="leading" constant="35" id="A8q-OQ-nUM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kg6-EQ-mdh" secondAttribute="trailing" constant="36" id="Wcw-RC-jKI"/>
+                                    <constraint firstItem="Kg6-EQ-mdh" firstAttribute="top" secondItem="D5U-a2-eSj" secondAttribute="top" constant="8" id="bcR-0n-7ob"/>
+                                    <constraint firstAttribute="height" constant="86" id="gcR-YK-vwk"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kg6-EQ-mdh" secondAttribute="bottom" constant="8" id="wPB-xo-9sC"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="top" secondItem="PX9-pN-wai" secondAttribute="top" id="2nJ-VL-giT"/>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="trailing" secondItem="PX9-pN-wai" secondAttribute="trailing" id="GPn-iR-apo"/>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="leading" secondItem="PX9-pN-wai" secondAttribute="leading" id="Hlk-CE-jy5"/>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="bottom" secondItem="PX9-pN-wai" secondAttribute="bottom" id="d8K-jV-jn5"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="top" secondItem="5QR-n6-jhP" secondAttribute="bottom" id="2nJ-VL-giT"/>
+                            <constraint firstItem="D5U-a2-eSj" firstAttribute="leading" secondItem="7ys-3E-ci6" secondAttribute="trailing" constant="8" id="5Ux-8I-3lN"/>
+                            <constraint firstItem="cHF-wW-dGf" firstAttribute="top" secondItem="D5U-a2-eSj" secondAttribute="bottom" constant="20" id="BPp-tn-vl4"/>
+                            <constraint firstItem="D5U-a2-eSj" firstAttribute="trailing" secondItem="LAy-qt-J0n" secondAttribute="trailingMargin" id="DE6-01-V56"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="trailing" secondItem="LAy-qt-J0n" secondAttribute="trailing" id="GPn-iR-apo"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="leading" secondItem="LAy-qt-J0n" secondAttribute="leading" id="Hlk-CE-jy5"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="bottom" secondItem="cHF-wW-dGf" secondAttribute="top" id="d8K-jV-jn5"/>
+                            <constraint firstItem="cHF-wW-dGf" firstAttribute="top" secondItem="7ys-3E-ci6" secondAttribute="bottom" constant="20" id="j3s-lg-Nu2"/>
+                            <constraint firstItem="7ys-3E-ci6" firstAttribute="leading" secondItem="LAy-qt-J0n" secondAttribute="leading" constant="8" id="ydg-5r-809"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="PX9-pN-wai"/>
                     </view>
                     <connections>
                         <outlet property="callButtonOutlet" destination="7ys-3E-ci6" id="fve-m1-ObD"/>
+                        <outlet property="labelView" destination="D5U-a2-eSj" id="9WL-c1-zBh"/>
+                        <outlet property="locationLabel" destination="Kg6-EQ-mdh" id="wqk-zz-F6y"/>
                         <outlet property="map" destination="lZp-BY-j4p" id="cEz-7L-ZKz"/>
                     </connections>
                 </viewController>

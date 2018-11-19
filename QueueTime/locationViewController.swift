@@ -18,6 +18,8 @@ class locationViewController: UIViewController, CLLocationManagerDelegate {
     
     //Outlet voor de knop waarmee gebeld kan worden //IVO
     @IBOutlet weak var callButtonOutlet: UIButton!
+    @IBOutlet weak var labelView: UIView!
+    @IBOutlet weak var locationLabel: UILabel!
     
     
     // Location manager
@@ -30,6 +32,9 @@ class locationViewController: UIViewController, CLLocationManagerDelegate {
         //Hier word de knop om mee te bellen in de juiste vorm gezet //IVO
         callButtonOutlet.layer.masksToBounds = true
         callButtonOutlet.layer.cornerRadius = 43
+        
+        //Hier wordt het label met de huidige locatie in de goede vorm gezet // TIM
+        labelView.layer.cornerRadius = 43
         
         
         self.locationManager.requestWhenInUseAuthorization()
@@ -51,8 +56,32 @@ class locationViewController: UIViewController, CLLocationManagerDelegate {
         let userLocation = locations.last
         let viewRegion = MKCoordinateRegion(center: (userLocation?.coordinate)!, latitudinalMeters: 600, longitudinalMeters: 600)
         self.map.setRegion(viewRegion, animated: true)
-        
         self.map.showsUserLocation = true
+        
+        // GeoCoder zet de coördinaten om naar leesbare locatie in label
+        //TIM
+        CLGeocoder().reverseGeocodeLocation(userLocation!) { (placemark, error) in
+            if error != nil
+            {
+                print("Error :(")
+            }
+            else
+            {
+                // Als locatie gelijk is aan laatste locatie...
+                //TIM
+                if let place = placemark?[0]
+                {
+                    // Zet label om naar tekst van laatste locatie
+                    //TIM
+                    self.locationLabel.text = "\(String(describing: place.thoroughfare!)) \n\(String(describing: place.locality!))"
+                    
+                    
+                    
+                   
+                }
+            }
+        }
+        
     }
 
 
