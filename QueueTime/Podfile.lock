@@ -67,11 +67,13 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - SinchRTC (3.12.6)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - GeoFire (from `https://github.com/firebase/geofire-objc.git`)
+  - SinchRTC
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -87,6 +89,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - SinchRTC
 
 EXTERNAL SOURCES:
   GeoFire:
@@ -111,7 +114,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  SinchRTC: 82ff35f50ee298ff632f88b934a2323b9b821a63
 
-PODFILE CHECKSUM: dbb0e9199bc5c03e5e951bc3db40e2651ab97105
+PODFILE CHECKSUM: 5f84ce0e811ca5d06e717b2ebb15dc92a58bf490
 
 COCOAPODS: 1.5.3

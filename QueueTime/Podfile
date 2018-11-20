@@ -9,6 +9,7 @@ target 'QueueTime' do
     pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
+	pod 'SinchRTC'
 
   target 'QueueTimeTests' do
     inherit! :search_paths
