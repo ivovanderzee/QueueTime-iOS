@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>75504223467-g8vje8e9lhdokt8pdf7v9q7oj65rh2qm.apps.googleusercontent.com</string>
+	<string>184880230861-qprquai10or803uf8umjpqpbip2em4gd.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.75504223467-g8vje8e9lhdokt8pdf7v9q7oj65rh2qm</string>
+	<string>com.googleusercontent.apps.184880230861-qprquai10or803uf8umjpqpbip2em4gd</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAi1C5rcP7SNDCQteFLpsPHpsZ9Cf8dqbQ</string>
+	<string>AIzaSyBitlQdanc1a4EyMCy6YOCSXqZ6Hp6Z950</string>
 	<key>GCM_SENDER_ID</key>
-	<string>75504223467</string>
+	<string>184880230861</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>ivovanderzee.QueueTime</string>
 	<key>PROJECT_ID</key>
-	<string>queuetime-f6015</string>
+	<string>queuetime-ios</string>
 	<key>STORAGE_BUCKET</key>
-	<string>queuetime-f6015.appspot.com</string>
+	<string>queuetime-ios.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:75504223467:ios:7fbe4db7c4937da7</string>
+	<string>1:184880230861:ios:7fbe4db7c4937da7</string>
 	<key>DATABASE_URL</key>
-	<string>https://queuetime-f6015.firebaseio.com</string>
+	<string>https://queuetime-ios.firebaseio.com</string>
 </dict>
 </plist>
