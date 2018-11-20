@@ -11,6 +11,7 @@
 		4AA5DB938B6959140A9AE6A8 /* Pods_QueueTimeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */; };
 		60C3BE15219C175500D93CC1 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C3BE14219C175500D93CC1 /* profileViewController.swift */; };
 		72361216219AE48E00FD832B /* locationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72361215219AE48E00FD832B /* locationViewController.swift */; };
+		A61B201B21A4455200290389 /* notificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B201A21A4455200290389 /* notificationViewController.swift */; };
 		BF1402EFDF2618BF41B5F010 /* Pods_QueueTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */; };
 		C2288601219AD14800537767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2288600219AD14800537767 /* GoogleService-Info.plist */; };
 		C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */; };
@@ -49,6 +50,7 @@
 		4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C3BE14219C175500D93CC1 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		72361215219AE48E00FD832B /* locationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = locationViewController.swift; path = ../locationViewController.swift; sourceTree = "<group>"; };
+		A61B201A21A4455200290389 /* notificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewController.swift; sourceTree = "<group>"; };
 		B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2288600219AD14800537767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				C23FA02A2191C124006BBE2D /* AppDelegate.swift */,
 				C23FA02C2191C124006BBE2D /* ViewController.swift */,
 				C23FA02E2191C124006BBE2D /* Main.storyboard */,
+				A61B201A21A4455200290389 /* notificationViewController.swift */,
 				60C3BE14219C175500D93CC1 /* profileViewController.swift */,
 				C22C28A3219AFDF300C3F800 /* loginViewController.swift */,
 				C2288600219AD14800537767 /* GoogleService-Info.plist */,
@@ -416,6 +419,7 @@
 				72361216219AE48E00FD832B /* locationViewController.swift in Sources */,
 				C23FA02D2191C124006BBE2D /* ViewController.swift in Sources */,
 				C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */,
+				A61B201B21A4455200290389 /* notificationViewController.swift in Sources */,
 				60C3BE15219C175500D93CC1 /* profileViewController.swift in Sources */,
 				C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */,
 				C22C28A4219AFDF300C3F800 /* loginViewController.swift in Sources */,
