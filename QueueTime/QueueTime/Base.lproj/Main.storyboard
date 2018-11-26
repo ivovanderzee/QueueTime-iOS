@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cn6-MO-Xad">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +14,6 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="signUpViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zuP-Fn-r3x"/>
-                        <viewControllerLayoutGuide type="bottom" id="dFu-lK-d6y"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,6 +88,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="drM-bt-wC3"/>
                     </view>
                     <connections>
                         <outlet property="password" destination="G5A-0S-DSu" id="oBM-as-ww3"/>
@@ -106,10 +104,6 @@
         <scene sceneID="CFw-M0-lae">
             <objects>
                 <viewController id="SQ6-Sr-m0N" customClass="loginViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FfQ-ei-1fH"/>
-                        <viewControllerLayoutGuide type="bottom" id="N9p-SI-L9P"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2J1-Bk-GCc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -157,6 +151,7 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="POu-pD-41V"/>
                     </view>
                     <connections>
                         <outlet property="password" destination="egY-EG-8y4" id="aXo-BC-EDD"/>
@@ -167,16 +162,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oa-aR-5bL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-682.39999999999998" y="1019.640179910045"/>
+            <point key="canvasLocation" x="-450" y="1020"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="iiZ-hB-kJ5">
             <objects>
                 <viewController id="SEW-gL-6Ii" customClass="profileViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hQ4-eO-LPZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Fve-Ng-1KU"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qJR-fr-Jy2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,6 +220,7 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZAH-7x-LE8"/>
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="yZD-sn-0UT" id="Mve-2G-4l9"/>
@@ -237,16 +229,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8R0-sY-ezE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1152.8" y="1053.8230884557722"/>
+            <point key="canvasLocation" x="324" y="1764"/>
         </scene>
         <!--Location View Controller-->
         <scene sceneID="mUz-t6-Zo0">
             <objects>
                 <viewController id="hdE-3X-VzH" customClass="locationViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5QR-n6-jhP"/>
-                        <viewControllerLayoutGuide type="bottom" id="cHF-wW-dGf"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LAy-qt-J0n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,16 +275,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="top" secondItem="5QR-n6-jhP" secondAttribute="bottom" id="2nJ-VL-giT"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="top" secondItem="9bf-g9-KVC" secondAttribute="top" id="2nJ-VL-giT"/>
                             <constraint firstItem="D5U-a2-eSj" firstAttribute="leading" secondItem="7ys-3E-ci6" secondAttribute="trailing" constant="8" id="5Ux-8I-3lN"/>
-                            <constraint firstItem="cHF-wW-dGf" firstAttribute="top" secondItem="D5U-a2-eSj" secondAttribute="bottom" constant="20" id="BPp-tn-vl4"/>
+                            <constraint firstItem="9bf-g9-KVC" firstAttribute="bottom" secondItem="D5U-a2-eSj" secondAttribute="bottom" constant="20" id="BPp-tn-vl4"/>
                             <constraint firstItem="D5U-a2-eSj" firstAttribute="trailing" secondItem="LAy-qt-J0n" secondAttribute="trailingMargin" id="DE6-01-V56"/>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="trailing" secondItem="LAy-qt-J0n" secondAttribute="trailing" id="GPn-iR-apo"/>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="leading" secondItem="LAy-qt-J0n" secondAttribute="leading" id="Hlk-CE-jy5"/>
-                            <constraint firstItem="lZp-BY-j4p" firstAttribute="bottom" secondItem="cHF-wW-dGf" secondAttribute="top" id="d8K-jV-jn5"/>
-                            <constraint firstItem="cHF-wW-dGf" firstAttribute="top" secondItem="7ys-3E-ci6" secondAttribute="bottom" constant="20" id="j3s-lg-Nu2"/>
-                            <constraint firstItem="7ys-3E-ci6" firstAttribute="leading" secondItem="LAy-qt-J0n" secondAttribute="leading" constant="8" id="ydg-5r-809"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="trailing" secondItem="9bf-g9-KVC" secondAttribute="trailing" id="GPn-iR-apo"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="leading" secondItem="9bf-g9-KVC" secondAttribute="leading" id="Hlk-CE-jy5"/>
+                            <constraint firstItem="lZp-BY-j4p" firstAttribute="bottom" secondItem="9bf-g9-KVC" secondAttribute="bottom" id="d8K-jV-jn5"/>
+                            <constraint firstItem="9bf-g9-KVC" firstAttribute="bottom" secondItem="7ys-3E-ci6" secondAttribute="bottom" constant="20" id="j3s-lg-Nu2"/>
+                            <constraint firstItem="7ys-3E-ci6" firstAttribute="leading" secondItem="9bf-g9-KVC" secondAttribute="leading" constant="8" id="ydg-5r-809"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="9bf-g9-KVC"/>
                     </view>
                     <connections>
                         <outlet property="callButtonOutlet" destination="7ys-3E-ci6" id="fve-m1-ObD"/>
@@ -307,16 +296,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4pC-U1-FPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242" y="-27"/>
+            <point key="canvasLocation" x="-450" y="1764"/>
         </scene>
         <!--Notification View Controller-->
         <scene sceneID="wPJ-g4-9cl">
             <objects>
                 <viewController id="Cn6-MO-Xad" customClass="notificationViewController" customModule="QueueTime" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="g3S-k9-MfZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="ujX-ig-jXK"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kKD-bb-Tep">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -338,11 +323,12 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2Cg-96-4an"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LW5-ch-2Uk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2084" y="-226"/>
+            <point key="canvasLocation" x="-1230" y="1764"/>
         </scene>
     </scenes>
     <resources>

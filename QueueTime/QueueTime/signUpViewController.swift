@@ -44,6 +44,21 @@ class signUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Function for showing introduction screens for one time
+    // TIM
+    override func viewDidAppear(_ animated: Bool) {
+        /*
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough")
+        {
+            return
+        }*/
+        let storyboard = UIStoryboard(name: "onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(withIdentifier: "walkthroughViewController") as? walkthroughViewController
+        {
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
+    }
+    
 
     /*
     // MARK: - Navigation
