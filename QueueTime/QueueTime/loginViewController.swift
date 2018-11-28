@@ -8,17 +8,82 @@
 
 import UIKit
 import FirebaseAuth
+import FBSDKLoginKit
+import FacebookCore
+import FacebookLogin
 
-class loginViewController: UIViewController {
+
+class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    //Functie die ervoor zorgt dat het account verbonden word met de Firebase database
+    fileprivate func signIntoFirebase() {
+        guard let authenticationToken = AccessToken.current?.authenticationToken else { return }
+        let credential = FacebookAuthProvider.credential(withAccessToken: authenticationToken)
+        Auth.auth().signIn(with: credential) { (user, err) in
+            if let err = err {
+                
+                print(err)
+            
+            }
+            print("Succesfully authenticated with Firebase.")
+            
+        }
+    }
+    
+    
+    
+    //Functie die word uitgevoerd wanneer er op de Facebooklogin button word geklikt
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        if error != nil {
+            
+            print(error)
+            return
+            
+        }
+        
+        print ("login via facebook gelukt!")
+        self.signIntoFirebase()
+    }
+    
+    
+    //Functie die word uitgevoerd wanneer er word uitgelogd bij facebook
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("uitgelogd bij Facebook")
+        
+        
+        
+        
+        
+    }
+    
 
     
     //Outlets voor het loginscherm
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var facebookLoginOutlet: UIButton!
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Button van facebook word aangemaakt
+        let facebook = FBSDKLoginButton()
+        view.addSubview(facebook)
+        
+        //Facebookbutton word toegevoegd aan de view
+        facebook.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
+        
+        
+        facebook.delegate = self
+        
+        //Email adres en het profiel worden opgehaald en in firebase gezet
+        facebook.readPermissions = ["email", "public_profile"]
+        
+    
         
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = 99
@@ -39,6 +104,10 @@ class loginViewController: UIViewController {
         
     }
     
+    
+    @IBAction func facebookLogin(_ sender: Any) {
+        
+    }
     
     
     //Actie die word uitgevoerd als er op de login button word gedrukt

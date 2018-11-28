@@ -2,6 +2,33 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb557195171374328</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>557195171374328</string>
+    <key>FacebookDisplayName</key>
+    <string>QueueTime</string>
+    
+    
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    
+    
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Mogen wij jouw locatie zien? Ook als je de app niet gebruikt? Dan blijft deze mooi op de achtergrond lopen, zodat je meteen een melding krijgt als er een file aankomt ;)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -45,5 +72,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+
+
+
 </dict>
 </plist>

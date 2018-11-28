@@ -9,15 +9,24 @@
 import UIKit
 import Firebase
 import UserNotifications
+import FBSDKLoginKit
+import FBSDKCoreKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
+    
+        
         FirebaseApp.configure()
+        
+
         
         //dit stukje code zorgt ervoor dat er notificaties verstuurd mogen worden vanaf de app naar het iOS systeem // Rens
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound])
@@ -35,6 +44,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
 
     
 

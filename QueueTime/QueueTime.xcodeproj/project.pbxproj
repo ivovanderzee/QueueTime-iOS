@@ -22,11 +22,11 @@
 		C22C28A4219AFDF300C3F800 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C28A3219AFDF300C3F800 /* loginViewController.swift */; };
 		C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA02A2191C124006BBE2D /* AppDelegate.swift */; };
 		C23FA02D2191C124006BBE2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA02C2191C124006BBE2D /* ViewController.swift */; };
-		C23FA0302191C124006BBE2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23FA02E2191C124006BBE2D /* Main.storyboard */; };
 		C23FA0322191C124006BBE2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23FA0312191C124006BBE2D /* Assets.xcassets */; };
 		C23FA0352191C124006BBE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23FA0332191C124006BBE2D /* LaunchScreen.storyboard */; };
 		C23FA0402191C124006BBE2D /* QueueTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA03F2191C124006BBE2D /* QueueTimeTests.swift */; };
 		C23FA04B2191C125006BBE2D /* QueueTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA04A2191C125006BBE2D /* QueueTimeUITests.swift */; };
+		C2B6969C21AD9A220043A7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B6969A21AD9A220043A7F7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 		C23FA0272191C124006BBE2D /* QueueTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QueueTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23FA02A2191C124006BBE2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C23FA02C2191C124006BBE2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C23FA02F2191C124006BBE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C23FA0312191C124006BBE2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C23FA0342191C124006BBE2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C23FA0362191C124006BBE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +75,7 @@
 		C23FA0462191C125006BBE2D /* QueueTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QueueTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C23FA04A2191C125006BBE2D /* QueueTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTimeUITests.swift; sourceTree = "<group>"; };
 		C23FA04C2191C125006BBE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2B6969B21AD9A220043A7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA0709188D0530BE4C004CA3 /* Pods-QueueTimeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueueTimeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QueueTimeTests/Pods-QueueTimeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFC50EBB2162DDB163A8F9E0 /* Pods-QueueTimeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueueTimeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QueueTimeTests/Pods-QueueTimeTests.release.xcconfig"; sourceTree = "<group>"; };
 		F8CABBCCD907CE88905E0A8A /* Pods-QueueTimeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueueTimeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QueueTimeUITests/Pods-QueueTimeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,8 +160,8 @@
 				C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */,
 				72361215219AE48E00FD832B /* locationViewController.swift */,
 				C23FA02A2191C124006BBE2D /* AppDelegate.swift */,
+				C2B6969A21AD9A220043A7F7 /* Main.storyboard */,
 				C23FA02C2191C124006BBE2D /* ViewController.swift */,
-				C23FA02E2191C124006BBE2D /* Main.storyboard */,
 				7242495D21A612B1002FD4A1 /* onboarding.storyboard */,
 				A61B201A21A4455200290389 /* notificationViewController.swift */,
 				60C3BE14219C175500D93CC1 /* profileViewController.swift */,
@@ -304,10 +304,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C23FA0352191C124006BBE2D /* LaunchScreen.storyboard in Resources */,
+				C2B6969C21AD9A220043A7F7 /* Main.storyboard in Resources */,
 				C2288601219AD14800537767 /* GoogleService-Info.plist in Resources */,
 				C23FA0322191C124006BBE2D /* Assets.xcassets in Resources */,
 				7242495E21A612B1002FD4A1 /* onboarding.storyboard in Resources */,
-				C23FA0302191C124006BBE2D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +381,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QueueTime/Pods-QueueTime-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -390,6 +395,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -474,20 +484,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C23FA02E2191C124006BBE2D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C23FA02F2191C124006BBE2D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C23FA0332191C124006BBE2D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C23FA0342191C124006BBE2D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C2B6969A21AD9A220043A7F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C2B6969B21AD9A220043A7F7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
