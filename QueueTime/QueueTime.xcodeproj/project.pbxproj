@@ -16,6 +16,8 @@
 		7242495C21A600B4002FD4A1 /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242495B21A600B4002FD4A1 /* walkthroughViewController.swift */; };
 		7242495E21A612B1002FD4A1 /* onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7242495D21A612B1002FD4A1 /* onboarding.storyboard */; };
 		A61B201B21A4455200290389 /* notificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B201A21A4455200290389 /* notificationViewController.swift */; };
+		A67597FF21AEA4B900215A8C /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67597FE21AEA4B900215A8C /* IntentHandler.swift */; };
+		A675980321AEA4B900215A8C /* QueueTime Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A67597FC21AEA4B900215A8C /* QueueTime Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BF1402EFDF2618BF41B5F010 /* Pods_QueueTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */; };
 		C2288601219AD14800537767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2288600219AD14800537767 /* GoogleService-Info.plist */; };
 		C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */; };
@@ -30,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A675980121AEA4B900215A8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C23FA01F2191C124006BBE2D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A67597FB21AEA4B900215A8C;
+			remoteInfo = "QueueTime Siri";
+		};
 		C23FA03C2191C124006BBE2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C23FA01F2191C124006BBE2D /* Project object */;
@@ -46,6 +55,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A675980721AEA4B900215A8C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A675980321AEA4B900215A8C /* QueueTime Siri.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		00889CC43C9519E898CC4366 /* Pods-QueueTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueueTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-QueueTime/Pods-QueueTime.release.xcconfig"; sourceTree = "<group>"; };
 		09284BEBF045B715133E27FC /* Pods-QueueTimeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QueueTimeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QueueTimeUITests/Pods-QueueTimeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +82,10 @@
 		7242495B21A600B4002FD4A1 /* walkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
 		7242495D21A612B1002FD4A1 /* onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboarding.storyboard; sourceTree = "<group>"; };
 		A61B201A21A4455200290389 /* notificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewController.swift; sourceTree = "<group>"; };
+		A67597F721AE9DED00215A8C /* QueueTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QueueTime.entitlements; sourceTree = "<group>"; };
+		A67597FC21AEA4B900215A8C /* QueueTime Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QueueTime Siri.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A67597FE21AEA4B900215A8C /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		A675980021AEA4B900215A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2288600219AD14800537767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +109,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A67597F921AEA4B900215A8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C23FA0242191C124006BBE2D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,12 +166,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A67597FD21AEA4B900215A8C /* QueueTime Siri */ = {
+			isa = PBXGroup;
+			children = (
+				A67597FE21AEA4B900215A8C /* IntentHandler.swift */,
+				A675980021AEA4B900215A8C /* Info.plist */,
+			);
+			path = "QueueTime Siri";
+			sourceTree = "<group>";
+		};
 		C23FA01E2191C124006BBE2D = {
 			isa = PBXGroup;
 			children = (
 				C23FA0292191C124006BBE2D /* QueueTime */,
 				C23FA03E2191C124006BBE2D /* QueueTimeTests */,
 				C23FA0492191C125006BBE2D /* QueueTimeUITests */,
+				A67597FD21AEA4B900215A8C /* QueueTime Siri */,
 				C23FA0282191C124006BBE2D /* Products */,
 				089D0048CE45F81F5DE76D89 /* Pods */,
 				290A2836CED1B4C9B906AF81 /* Frameworks */,
@@ -150,6 +194,7 @@
 				C23FA0272191C124006BBE2D /* QueueTime.app */,
 				C23FA03B2191C124006BBE2D /* QueueTimeTests.xctest */,
 				C23FA0462191C125006BBE2D /* QueueTimeUITests.xctest */,
+				A67597FC21AEA4B900215A8C /* QueueTime Siri.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,6 +202,7 @@
 		C23FA0292191C124006BBE2D /* QueueTime */ = {
 			isa = PBXGroup;
 			children = (
+				A67597F721AE9DED00215A8C /* QueueTime.entitlements */,
 				C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */,
 				72361215219AE48E00FD832B /* locationViewController.swift */,
 				C23FA02A2191C124006BBE2D /* AppDelegate.swift */,
@@ -198,6 +244,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A67597FB21AEA4B900215A8C /* QueueTime Siri */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A675980421AEA4B900215A8C /* Build configuration list for PBXNativeTarget "QueueTime Siri" */;
+			buildPhases = (
+				A67597F821AEA4B900215A8C /* Sources */,
+				A67597F921AEA4B900215A8C /* Frameworks */,
+				A67597FA21AEA4B900215A8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QueueTime Siri";
+			productName = "QueueTime Siri";
+			productReference = A67597FC21AEA4B900215A8C /* QueueTime Siri.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		C23FA0262191C124006BBE2D /* QueueTime */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C23FA04F2191C125006BBE2D /* Build configuration list for PBXNativeTarget "QueueTime" */;
@@ -207,10 +270,12 @@
 				C23FA0242191C124006BBE2D /* Frameworks */,
 				C23FA0252191C124006BBE2D /* Resources */,
 				A8734B891276724CC1ABFC0C /* [CP] Embed Pods Frameworks */,
+				A675980721AEA4B900215A8C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A675980221AEA4B900215A8C /* PBXTargetDependency */,
 			);
 			name = QueueTime;
 			productName = QueueTime;
@@ -265,8 +330,16 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Ivo van der Zee";
 				TargetAttributes = {
+					A67597FB21AEA4B900215A8C = {
+						CreatedOnToolsVersion = 10.1;
+					};
 					C23FA0262191C124006BBE2D = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					C23FA03A2191C124006BBE2D = {
 						CreatedOnToolsVersion = 10.1;
@@ -294,11 +367,19 @@
 				C23FA0262191C124006BBE2D /* QueueTime */,
 				C23FA03A2191C124006BBE2D /* QueueTimeTests */,
 				C23FA0452191C125006BBE2D /* QueueTimeUITests */,
+				A67597FB21AEA4B900215A8C /* QueueTime Siri */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A67597FA21AEA4B900215A8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C23FA0252191C124006BBE2D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -435,6 +516,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A67597F821AEA4B900215A8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67597FF21AEA4B900215A8C /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C23FA0232191C124006BBE2D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,6 +560,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A675980221AEA4B900215A8C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A67597FB21AEA4B900215A8C /* QueueTime Siri */;
+			targetProxy = A675980121AEA4B900215A8C /* PBXContainerItemProxy */;
+		};
 		C23FA03D2191C124006BBE2D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C23FA0262191C124006BBE2D /* QueueTime */;
@@ -503,6 +597,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A675980521AEA4B900215A8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2D8V294PL7;
+				INFOPLIST_FILE = "QueueTime Siri/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivovanderzee.QueueTime.QueueTime-Siri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A675980621AEA4B900215A8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2D8V294PL7;
+				INFOPLIST_FILE = "QueueTime Siri/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ivovanderzee.QueueTime.QueueTime-Siri";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		C23FA04D2191C125006BBE2D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -623,7 +755,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 254F9171F152CA76E1B64B34 /* Pods-QueueTime.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QueueTime/QueueTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2D8V294PL7;
 				INFOPLIST_FILE = QueueTime/Info.plist;
@@ -631,7 +765,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ivovanderzee.QueueTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivovanderzee.QueueTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -642,7 +776,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00889CC43C9519E898CC4366 /* Pods-QueueTime.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QueueTime/QueueTime.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2D8V294PL7;
 				INFOPLIST_FILE = QueueTime/Info.plist;
@@ -650,7 +786,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ivovanderzee.QueueTime;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ivovanderzee.QueueTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -746,6 +882,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A675980421AEA4B900215A8C /* Build configuration list for PBXNativeTarget "QueueTime Siri" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A675980521AEA4B900215A8C /* Debug */,
+				A675980621AEA4B900215A8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C23FA0222191C124006BBE2D /* Build configuration list for PBXProject "QueueTime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -11,6 +11,7 @@ import Firebase
 import UserNotifications
 import FBSDKLoginKit
 import FBSDKCoreKit
+import Intents
 
 
 @UIApplicationMain
@@ -44,6 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     
+    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+        guard let intent = userActivity.interaction?.intent as? INAskSiriIntent else {
+            print("AppDelegate: Ik sta in de file - FALSE")
+            return false
+        }
+        print("AppDelegate: Ik sta in de file - TRUE")
+        print(intent)
+        return true
+    }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
