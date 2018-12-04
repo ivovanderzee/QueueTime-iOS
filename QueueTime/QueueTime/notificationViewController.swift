@@ -20,10 +20,22 @@ class notificationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         INPreferences.requestSiriAuthorization { (status) in
             
+            if status == .authorized {
+                print("Siri access allowed")
+            }
+            
+            else {
+                print("Siri access denied")
+            }
+            
+            
         }
-        INVocabulary.shared().setVocabularyStrings(["push up", "sit up", "pull up"], of: .workoutActivityName)
+        
+         DataManager.sharedManager.saveContacts(contacts: [["name": "Rens", "number": "0623674821"], ["name": "Tim", "number": "0678123595"], ["name": "Xandor", "number": "0640209467"], ["name": "Steven", "number": "0653409248"]])
+        
     }
     
 

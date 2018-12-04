@@ -11,6 +11,9 @@ import FirebaseAuth
 import FBSDKLoginKit
 import FacebookCore
 import FacebookLogin
+import Intents
+
+
 
 
 class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
@@ -41,8 +44,10 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
             
         }
         
+          self.performSegue(withIdentifier: "login", sender: self)
         print ("login via facebook gelukt!")
         self.signIntoFirebase()
+      
     }
     
     
@@ -50,10 +55,7 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("uitgelogd bij Facebook")
         
-        
-        
-        
-        
+        self.performSegue(withIdentifier: "login", sender: self)
     }
     
 
@@ -62,20 +64,41 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var facebookLoginOutlet: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
-
+    @IBOutlet weak var topView: UIView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        INPreferences.requestSiriAuthorization { (status) in
+            
+            if status == .authorized {
+                print("Siri access allowed")
+            }
+                
+            else {
+                print("Siri access denied")
+            }
+            
+            
+            
+            
+        }
+        
+    
+      
         
         //Button van facebook word aangemaakt
         let facebook = FBSDKLoginButton()
         view.addSubview(facebook)
         
         //Facebookbutton word toegevoegd aan de view
-        facebook.frame = CGRect(x: 16, y: 50, width: view.frame.width - 32, height: 50)
+        facebook.frame = CGRect(x: 19, y: 620, width: 375, height: 50)
+        
         
         
         facebook.delegate = self
@@ -86,23 +109,31 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
         
         profileImage.layer.masksToBounds = true
-        profileImage.layer.cornerRadius = 99
-        profileImage.layer.borderWidth = 5
-        profileImage.layer.borderColor = UIColor.black.cgColor
+        profileImage.layer.cornerRadius = 117
+        
         
         username.layer.masksToBounds = true
-        username.layer.cornerRadius = 3
-        username.layer.borderWidth = 1
-        username.layer.borderColor = UIColor.black.cgColor
+        username.layer.cornerRadius = 20
+     
+        username.layer.backgroundColor = UIColor.white.cgColor
         
         password.layer.masksToBounds = true
-        password.layer.cornerRadius = 3
-        password.layer.borderWidth = 1
-        password.layer.borderColor = UIColor.black.cgColor
+        password.layer.cornerRadius = 20
+       
+        password.layer.backgroundColor = UIColor.white.cgColor
         
+        loginButton.layer.masksToBounds = true
+        loginButton.layer.cornerRadius = 3
         
+        topView.layer.masksToBounds = true
+        topView.layer.cornerRadius = 385
+        
+       
+    
         
     }
+    
+   
     
     
     @IBAction func facebookLogin(_ sender: Any) {
@@ -134,7 +165,8 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
-
+    
+   
     /*
     // MARK: - Navigation
 
@@ -144,5 +176,9 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
 }

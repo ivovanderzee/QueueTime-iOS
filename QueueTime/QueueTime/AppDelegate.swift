@@ -45,15 +45,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
     
+
+    
+    
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
-        guard let intent = userActivity.interaction?.intent as? INAskSiriIntent else {
-            print("AppDelegate: Ik sta in de file - FALSE")
+        
+        guard let audioCallIntent = userActivity.interaction?.intent as? INStartAudioCallIntent else {
             return false
         }
-        print("AppDelegate: Ik sta in de file - TRUE")
-        print(intent)
+        
+        if let contact = audioCallIntent.contacts?.first {
+            
+            if let type = contact.personHandle?.type, type == .phoneNumber {
+                
+                guard let callNumber = contact.personHandle?.value else {
+                    return false
+                }
+                
+                let callUrl = URL(string: "tel://\(callNumber)")
+                
+                if UIApplication.shared.canOpenURL(callUrl!) {
+                    UIApplication.shared.open(callUrl!, options: [:], completionHandler: nil)
+                } else {
+                    
+                    let alertController = UIAlertController(title: nil , message: "Calling not supported", preferredStyle: .alert)
+                    let okAlertAction = UIAlertAction(title: "Ok" , style: UIAlertAction.Style.default, handler:nil)
+                    alertController.addAction(okAlertAction)
+                    self.window?.rootViewController?.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+        
         return true
     }
+    
+    
+    
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)

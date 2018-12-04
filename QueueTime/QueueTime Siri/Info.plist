@@ -28,7 +28,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>INAskSiriIntent</string>
+				<string>INStartAudioCallIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>

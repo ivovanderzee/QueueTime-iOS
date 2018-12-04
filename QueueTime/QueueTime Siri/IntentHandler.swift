@@ -8,22 +8,57 @@
 
 import Intents
 
-class IntentHandler: INExtension, INAskSiriIntentHandling {
-    func handle(startInfo intent: INAskSiriIntent, completion: @escaping (INAskSiriIntentResponse) -> Void) {
 
-        print("Ik sta in de file", intent)
+class IntentHandler: INExtension, INStartAudioCallIntentHandling{
+    
+    
+    func handle(intent: INStartAudioCallIntent, completion: @escaping (INStartAudioCallIntentResponse) -> Void) {
         
-        let userActivity: NSUserActivity? = nil
-        guard let spokenPhrase = intent.placeName?.spokenPhrase else {
-            completion(INAskSiriIntentResponse(code: .failureNoMatchingWorkout, userActivity: userActivity))
-            return
-        }
+    
+        print("Bel via QueueTime", intent)
         
-        print(spokenPhrase)
+        let userActivity = NSUserActivity(activityType: NSStringFromClass(INStartAudioCallIntent.self))
         
-        completion(INAskSiriIntentResponse(code: .continueInApp, userActivity: userActivity))
+        let response = INStartAudioCallIntentResponse(code: .continueInApp, userActivity: userActivity)
+        completion(response)
+        
+        
+         completion(INStartAudioCallIntentResponse(code: .continueInApp, userActivity: userActivity))
         
     }
     
     
-}
+    func resolveContacts(for intent: INStartAudioCallIntent, with completion: @escaping ([INPersonResolutionResult]) -> Void) {
+        
+        var contactName: String?
+        
+        if let contacts = intent.contacts {
+            contactName = contacts.first?.displayName
+        }
+        
+        DataManager.sharedManager.findContact(contactName: contactName, with: { (contacts) in
+            
+            switch contacts.count {
+                
+            case 1:
+                completion([INPersonResolutionResult.success(with: contacts.first!)])
+            case 2 ... Int.max:
+                completion([INPersonResolutionResult.disambiguation(with: contacts)])
+            default:
+                completion([INPersonResolutionResult.unsupported()])
+            }
+            
+        })
+    }
+    
+    func confirm(intent: INStartAudioCallIntent, completion: @escaping (INStartAudioCallIntentResponse) -> Void) {
+        
+        let userActivity = NSUserActivity(activityType: NSStringFromClass(INStartAudioCallIntent.self))
+        let response = INStartAudioCallIntentResponse(code: .ready, userActivity: userActivity)
+        completion(response)
+    }
+
+    }
+    
+    
+
