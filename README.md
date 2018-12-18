@@ -20,6 +20,14 @@ This GitHub Depository is home to the iOS version of QueueTime, the other versio
 6. Open the .xcworkspace file in Xcode.
 ## Login
 
+1) This is the login page for our swift-app QueueTime. You can register or login with your Facebook-account.
+
+2) Now your account has been verified and ready for use, you have acces to the start-page.
+
+3)
+
+4)
+
 ## Built With
 
 * [XCode] - The app framework used
@@ -29,7 +37,7 @@ This GitHub Depository is home to the iOS version of QueueTime, the other versio
 * **Tim van der Zee** - *Initial work* - 
 * **Ivo van der Zee** - *Initial work* - 
 * **Xandor Naus** - *Initial work* - 
-* **Rens de Meuelemeester** - *Initial work* - 
+* **Rens de Meulemeester** - *Initial work* - 
 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
