@@ -28,8 +28,6 @@
 		C23FA0352191C124006BBE2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23FA0332191C124006BBE2D /* LaunchScreen.storyboard */; };
 		C23FA0402191C124006BBE2D /* QueueTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA03F2191C124006BBE2D /* QueueTimeTests.swift */; };
 		C23FA04B2191C125006BBE2D /* QueueTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23FA04A2191C125006BBE2D /* QueueTimeUITests.swift */; };
-		C28AE5EF21B46BE100AFA74B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28AE5EC21B4699E00AFA74B /* DataManager.swift */; };
-		C28AE5F121B46F9000AFA74B /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28AE5EC21B4699E00AFA74B /* DataManager.swift */; };
 		C28AE5F521B4A01500AFA74B /* CallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28AE5F421B4A01500AFA74B /* CallViewController.m */; };
 		C2B6969C21AD9A220043A7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B6969A21AD9A220043A7F7 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -106,7 +104,6 @@
 		C23FA04A2191C125006BBE2D /* QueueTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueTimeUITests.swift; sourceTree = "<group>"; };
 		C23FA04C2191C125006BBE2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C28AE5E421B4653300AFA74B /* QueueTime Siri.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "QueueTime Siri.entitlements"; sourceTree = "<group>"; };
-		C28AE5EC21B4699E00AFA74B /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = "/Users/ivovanderzee/QueueTime-iOS/QueueTime/QueueTime/DataManager.swift"; sourceTree = "<absolute>"; usesTabs = 0; wrapsLines = 1; };
 		C28AE5F221B4A01400AFA74B /* QueueTime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QueueTime-Bridging-Header.h"; sourceTree = "<group>"; };
 		C28AE5F321B4A01500AFA74B /* CallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CallViewController.h; sourceTree = "<group>"; };
 		C28AE5F421B4A01500AFA74B /* CallViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CallViewController.m; sourceTree = "<group>"; };
@@ -229,7 +226,6 @@
 				C2288600219AD14800537767 /* GoogleService-Info.plist */,
 				C23FA0312191C124006BBE2D /* Assets.xcassets */,
 				C23FA0332191C124006BBE2D /* LaunchScreen.storyboard */,
-				C28AE5EC21B4699E00AFA74B /* DataManager.swift */,
 				C23FA0362191C124006BBE2D /* Info.plist */,
 				C28AE5F221B4A01400AFA74B /* QueueTime-Bridging-Header.h */,
 			);
@@ -491,6 +487,7 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -505,6 +502,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -543,7 +541,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A67597FF21AEA4B900215A8C /* IntentHandler.swift in Sources */,
-				C28AE5F121B46F9000AFA74B /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,7 +557,6 @@
 				C28AE5F521B4A01500AFA74B /* CallViewController.m in Sources */,
 				C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */,
 				7242495C21A600B4002FD4A1 /* walkthroughViewController.swift in Sources */,
-				C28AE5EF21B46BE100AFA74B /* DataManager.swift in Sources */,
 				7242495A21A5F8D3002FD4A1 /* walkthroughPageViewController.swift in Sources */,
 				C22C28A4219AFDF300C3F800 /* loginViewController.swift in Sources */,
 			);
@@ -786,6 +782,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QueueTime/QueueTime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2D8V294PL7;
 				INFOPLIST_FILE = QueueTime/Info.plist;
@@ -795,6 +792,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivovanderzee.QueueTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QueueTime/QueueTime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -810,6 +808,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = QueueTime/QueueTime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2D8V294PL7;
 				INFOPLIST_FILE = QueueTime/Info.plist;
@@ -819,6 +818,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ivovanderzee.QueueTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "QueueTime/QueueTime-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

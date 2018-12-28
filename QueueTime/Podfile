@@ -16,6 +16,7 @@ target 'QueueTime' do
 	pod 'FBSDKLoginKit'
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
+	pod 'Firebase/Messaging'
 
 
   target 'QueueTimeTests' do

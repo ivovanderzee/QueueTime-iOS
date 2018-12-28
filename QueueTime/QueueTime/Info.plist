@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Wilt graag toegang tot de microfoon</string>
-	<key>NSSiriUsageDescription</key>
-	<string>QueueTime wilt graag Siri gebruiken</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -48,6 +44,10 @@
 	<string>Mogen wij jouw locatie zien? Ook als je de app niet gebruikt? Dan blijft deze mooi op de achtergrond lopen, zodat je meteen een melding krijgt als er een file aankomt ;)</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Mogen wij jouw locatie zien?</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Wilt graag toegang tot de microfoon</string>
+	<key>NSSiriUsageDescription</key>
+	<string>QueueTime wilt graag Siri gebruiken</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

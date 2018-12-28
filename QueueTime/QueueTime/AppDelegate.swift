@@ -15,7 +15,7 @@ import Intents
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
     
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 
         
-        //dit stukje code zorgt ervoor dat er notificaties verstuurd mogen worden vanaf de app naar het iOS systeem // Rens
+        //  There will be a check if it is allowed for notifications to be send from the app to the iOS system // Rens
         UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound])
             {(succes, error) in
                 if error !=  nil{
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         return true
         
-            
+        
         }
     
 
