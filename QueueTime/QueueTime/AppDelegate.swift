@@ -6,6 +6,8 @@
 //  Copyright © 2018 Ivo van der Zee. All rights reserved.
 //
 
+
+//All libraries that are used in this viewcontroller
 import UIKit
 import Firebase
 import UserNotifications
@@ -25,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         FBSDKApplicationDelegate.sharedInstance()?.application(application, didFinishLaunchingWithOptions: launchOptions)
     
         
+        //The firebase configured in the appdelegate so every viewcontroller can access this function
         FirebaseApp.configure()
         
 

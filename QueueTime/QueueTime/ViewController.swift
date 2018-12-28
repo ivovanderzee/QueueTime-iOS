@@ -10,11 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //Outlets voor het loginscherm
+    //Outlets for the loginscreen
     @IBOutlet weak var userNameTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     
-    //Button die ervoor een actie aanroept als de gebruiker wilt inloggen
+    //Action that runs when the user clicks the loginbutton
     @IBAction func loginButton(_ sender: Any) {
     }
     override func viewDidLoad() {

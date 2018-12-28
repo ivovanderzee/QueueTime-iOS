@@ -6,11 +6,16 @@
 //  Copyright © 2018 Ivo van der Zee. All rights reserved.
 //
 
+
+//Libraries that are used in this viewcontroller
 import UIKit
 import FirebaseAuth
 import FBSDKLoginKit
 import FacebookCore
 import FacebookLogin
+
+
+//Library for siri integration
 import Intents
 
 
@@ -18,7 +23,7 @@ import Intents
 
 class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
-    //Functie die ervoor zorgt dat het account verbonden word met de Firebase database
+    //Function that connects the facebook acccount to the firebase database
     fileprivate func signIntoFirebase() {
         guard let authenticationToken = AccessToken.current?.authenticationToken else { return }
         let credential = FacebookAuthProvider.credential(withAccessToken: authenticationToken)
@@ -35,7 +40,7 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     
-    //Functie die word uitgevoerd wanneer er op de Facebooklogin button word geklikt
+    //Function that runs when the user clicks the facebooklogin button
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         if error != nil {
             
@@ -44,6 +49,7 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
             
         }
         
+        //The segue "login" activates when the facebooklogin is succeeded
           self.performSegue(withIdentifier: "login", sender: self)
         print ("login via facebook gelukt!")
         self.signIntoFirebase()
@@ -51,16 +57,15 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     
     
-    //Functie die word uitgevoerd wanneer er word uitgelogd bij facebook
+    //Function that logs the user out
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("uitgelogd bij Facebook")
         
-        self.performSegue(withIdentifier: "login", sender: self)
     }
     
 
     
-    //Outlets voor het loginscherm
+    //Outlets for the loginscreen
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
@@ -70,10 +75,11 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     
+    //This code runs when the whole view is loaded
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        //The app ask if it can use Siri
         INPreferences.requestSiriAuthorization { (status) in
             
             if status == .authorized {
@@ -92,39 +98,33 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
       
         
-        //Button van facebook word aangemaakt
+        //Button for the facebook login is created
         let facebook = FBSDKLoginButton()
+        //This code adds the button to the main view
         view.addSubview(facebook)
         
-        //Facebookbutton word toegevoegd aan de view
+        //Facebookbutton gets in shape
         facebook.frame = CGRect(x: 19, y: 620, width: 375, height: 50)
         
         
         
         facebook.delegate = self
         
-        //Email adres en het profiel worden opgehaald en in firebase gezet
+        //This code provides the app can read the email adress and public profile name
         facebook.readPermissions = ["email", "public_profile"]
         
     
-        
+        //The elements in the screen are getting in shape (cornerRadius)
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = 117
-        
-        
         username.layer.masksToBounds = true
         username.layer.cornerRadius = 20
-     
         username.layer.backgroundColor = UIColor.white.cgColor
-        
         password.layer.masksToBounds = true
         password.layer.cornerRadius = 20
-       
         password.layer.backgroundColor = UIColor.white.cgColor
-        
         loginButton.layer.masksToBounds = true
         loginButton.layer.cornerRadius = 3
-        
         topView.layer.masksToBounds = true
         topView.layer.cornerRadius = 385
         
@@ -135,28 +135,25 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
    
     
-    
-    @IBAction func facebookLogin(_ sender: Any) {
-        
-    }
+
     
     
-    //Actie die word uitgevoerd als er op de login button word gedrukt
+    //Code that runs when the user clicks the loginButton
     @IBAction func loginButton(_ sender: Any) {
         
         
-        //Functie waarmee de gebruiker kan inloggen met de ingevoerde gegevens
+        //The user can login with the username and password that are typed in the outlets
         Auth.auth().signIn(withEmail: username.text!, password: password.text!) { (user, error) in
             if user != nil{
                 
                 
-                //De segue "login" word uitgevoerd wanneer de ingevoerde gegevens kloppen
+                //The segue "login" is activated when the username and password are correct
                 self.performSegue(withIdentifier: "login", sender: self)
             }
             else{
                 
                 
-                //De gebruiker krijgt een alert te zien wanneer het inloggen is mislukt
+                //When the login fails, a pop-up appeared in the screen
                 let alert = UIAlertController(title: "Er heeft zich een probleem voorgedaan", message: nil, preferredStyle: .alert)
                 let okButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(okButton)
@@ -177,6 +174,8 @@ class loginViewController: UIViewController, FBSDKLoginButtonDelegate {
     }
     */
     
+    
+    //function that hides the keyboard when the user clicks on a random spot in the screen
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }

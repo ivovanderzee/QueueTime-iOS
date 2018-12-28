@@ -6,11 +6,15 @@
 //  Copyright © 2018 Ivo van der Zee. All rights reserved.
 //
 
+
+//The Viewcontroller CallViewController is imported in this viewcontroller
 #import "CallViewController.h"
 
+//The library for audio is imported in this viewcontroller
 #import <AVFoundation/AVFoundation.h>
 
 
+//SINClient and SINCall are created to use in this viewcontroller. With this id's a connection can be created
 @interface CallViewController ()
 {
     id<SINClient> _client;
@@ -19,7 +23,10 @@
 
 @end
 
+//The CallViewController is implemented
 @implementation CallViewController
+
+//The outlet from the CallViewController.h is synthesized
 @synthesize textField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +40,10 @@
 
 
 
+//Code that runs when the view did load
 - (void)viewDidLoad {
+    
+    
     
     [super viewDidLoad];
     [self initSinchClient];
@@ -56,10 +66,14 @@
 }
 */
 
+
+//The VoIP server is initialized. Here you can see the Sinch user information that I used to set up the connection with the server
 - (void)initSinchClient {
     _client = [Sinch clientWithApplicationKey:@"131d2725-c1c6-4289-bbde-a4a1f26b09d7"
                             applicationSecret:@"P05tTASK3kq1IFFJ/p4BTA=="
                               environmentHost:@"sandbox.sinch.com"
+               
+               //I make the userId static to "B"
                                        userId:@"B"];
     _client.callClient.delegate = self;
     [_client setSupportCalling:YES];
@@ -67,10 +81,13 @@
     [_client startListeningOnActiveConnection];
 }
 
+//Code that runs when the user clicks the button to call a user
 - (IBAction)callUser:(id)sender {
     
     if (_call == nil)
+        
     {
+        //The app calls the user that is typed in the textfield
         _call = [_client.callClient callUserWithId:self.textField.text];
         _call.delegate = self;
     }
@@ -81,9 +98,12 @@
     }
 }
 
+
+  //When a user gets called. This code serves that a user can answer the call
 -(void)client:(id<SINCallClient>)client didReceiveIncomingCall:(id<SINCall>)call {
-    //for now we are just going to answer calls,
-    //in a normal app you would show in incoming call screen
+
+    
+
     call.delegate = self;
     [call answer];
     _call = call;
@@ -92,16 +112,18 @@
 #pragma mark - SINCallDelegate
 
 - (void)callDidProgress:(id<SINCall>)call {
-    //in this method you can play ringing tone adn update ui to display progress of call.
+    
 }
-
+  //called when call established
 - (void)callDidEstablish:(id<SINCall>)call {
-    //Called when a call connects.
+    
     [self.callButton setTitle:@"Hang up" forState:UIControlStateNormal];
 }
 
+
+  //called when call finnished.
 - (void)callDidEnd:(id<SINCall>)call {
-    //called when call finnished.
+  
     [self.callButton setTitle:@"Call" forState:UIControlStateNormal];
     _call = nil;
     
