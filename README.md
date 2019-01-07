@@ -24,10 +24,6 @@ This GitHub Depository is home to the iOS version of QueueTime, the other versio
 
 2) Now your account has been verified and ready for use, you have acces to the start-page.
 
-3)
-
-4)
-
 ## Built With
 
 * [XCode] - The app framework used
@@ -42,4 +38,4 @@ This GitHub Depository is home to the iOS version of QueueTime, the other versio
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-* etc
+
