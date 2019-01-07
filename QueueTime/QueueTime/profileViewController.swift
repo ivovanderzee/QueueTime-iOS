@@ -15,27 +15,27 @@ let ref = Database.database().reference(withPath: "Personalinfo")
 
 class profileViewController: UIViewController {
     
-    //Outlets voor het loginscherm
+    //Outlets for the login screen
     @IBOutlet weak var ageTextField: UITextField!
     
     @IBOutlet weak var malefemaleTextField: UITextField!
     
-    //Actie die word uitgevoerd als er op de login button word gedrukt
+    //Action that is carried out when the login button is pressed
     @IBAction func sendinfoButton(_ sender: Any) {
         
-        //Actie die word uitgevoerd als er op de login button word gedrukt
+        //Action that is carried out when the login button is pressed
         let PeronsalinfoDB = Database.database().reference().child("Personalinfo")
         
-        // Values die in de twee textvelden staan worden toegevoegd in Firebase-database.
+        //Values ​​in the two text fields are added in Firebase database.
         let PeronsalinfoDictionary : NSDictionary = ["age" : malefemaleTextField.text!, "gender" : ageTextField.text!]
         PeronsalinfoDB.childByAutoId().setValue(PeronsalinfoDictionary) {
             (error, ref) in
             
-            // Actie is niet uitgevoerd, en geeft melding.
+            //Action has not been executed, and reports.
             if error != nil {
                 print(error!)
                 
-                // Actie is succesfully uitgevoerd, en geeft melding.
+                //Action has been successfully executed and reports.
             }
             else {
                 print("Message saved successfully!")
@@ -44,7 +44,7 @@ class profileViewController: UIViewController {
         
     }
     
-    // Do any additional setup after loading the view.
+    //Do any additional setup after loading the view.
 }
 
 
