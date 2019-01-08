@@ -6,6 +6,8 @@
 //  Copyright © 2018 Ivo van der Zee. All rights reserved.
 //
 
+
+// library that I used to integrate Siri in the application
 import Intents
 
 
@@ -14,15 +16,15 @@ class IntentHandler: INExtension, INStartAudioCallIntentHandling{
     
     func handle(intent: INStartAudioCallIntent, completion: @escaping (INStartAudioCallIntentResponse) -> Void) {
         
-    
-        print("Bel via QueueTime", intent)
+        // Print test in console
+        print("Test", intent)
         
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INStartAudioCallIntent.self))
         
         let response = INStartAudioCallIntentResponse(code: .continueInApp, userActivity: userActivity)
         completion(response)
         
-        
+        // When Siri completes the action, the user returns to the app
          completion(INStartAudioCallIntentResponse(code: .continueInApp, userActivity: userActivity))
         
     }

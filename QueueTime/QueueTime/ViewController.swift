@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
@@ -19,9 +20,27 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-       
         
+       
+        // When view is loaded, the app asks autorization for Siri
+        INPreferences.requestSiriAuthorization { (status) in
+            
+            // When given authorization, access allowed is printed
+            if status == .authorized {
+                print("Siri access allowed")
+            }
+                
+                
+                // When authorization is declined by user the console prints this text
+            else {
+                print("Siri access denied")
+            }
+            
+            
+        }
+        
+        // Static contacts in datamanager
+        DataManager.sharedManager.saveContacts(contacts: [["name": "Rens", "number": "0623674821"], ["name": "Tim", "number": "0678123595"], ["name": "Xandor", "number": "0640209467"], ["name": "Steven", "number": "0653409248"]])
         
     }
 

@@ -29,19 +29,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         //The firebase configured in the appdelegate so every viewcontroller can access this function
         FirebaseApp.configure()
-        
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification sent via Apple Push Notification service
+            UNUserNotificationCenter.current().delegate = self
+            
+            // Allows different kinds of alerts for user
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            
+            // The app request the user for usernotificcations for the different notifications that are selected in authOptions
+            UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in})
+           
+            
+        }else{
+            
+            // Notification settings are set on default because no category is set
+            let settings: UIUserNotificationSettings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        // notification comes from a remote. This remote is FireBase
+        application.registerForRemoteNotifications()
 
         
-        //  There will be a check if it is allowed for notifications to be send from the app to the iOS system // Rens
-        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound])
-            {(succes, error) in
-                if error !=  nil{
-                    print("Autorisatie niet succesvol")
-                }else{
-                    print("Autorisatie is succesvol")
-                    
-                }
-            }
+       
             
         return true
         
@@ -53,22 +62,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         
+        // AudioCAllIntent is created
         guard let audioCallIntent = userActivity.interaction?.intent as? INStartAudioCallIntent else {
             return false
         }
         
+        // Picks contacts
         if let contact = audioCallIntent.contacts?.first {
             
+            
+            // Picks phonenumber
             if let type = contact.personHandle?.type, type == .phoneNumber {
                 
+                // If there is no phonenumber, no value returns
                 guard let callNumber = contact.personHandle?.value else {
                     return false
                 }
                 
+                // Phonenumber is put into a type of URL
                 let callUrl = URL(string: "tel://\(callNumber)")
                 
+                // If its possible to open it opens
                 if UIApplication.shared.canOpenURL(callUrl!) {
                     UIApplication.shared.open(callUrl!, options: [:], completionHandler: nil)
+                    
+                    
+                    // If it is not possible to open it there will be a alert message in the default style
                 } else {
                     
                     let alertController = UIAlertController(title: nil , message: "Calling not supported", preferredStyle: .alert)

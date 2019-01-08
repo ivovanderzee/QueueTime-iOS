@@ -15,9 +15,10 @@
 		7242495A21A5F8D3002FD4A1 /* walkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242495921A5F8D3002FD4A1 /* walkthroughPageViewController.swift */; };
 		7242495C21A600B4002FD4A1 /* walkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242495B21A600B4002FD4A1 /* walkthroughViewController.swift */; };
 		7242495E21A612B1002FD4A1 /* onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7242495D21A612B1002FD4A1 /* onboarding.storyboard */; };
-		A61B201B21A4455200290389 /* notificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61B201A21A4455200290389 /* notificationViewController.swift */; };
 		A67597FF21AEA4B900215A8C /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A67597FE21AEA4B900215A8C /* IntentHandler.swift */; };
 		A675980321AEA4B900215A8C /* QueueTime Siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A67597FC21AEA4B900215A8C /* QueueTime Siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A685F97721E4A36500413AFD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685F97621E4A36500413AFD /* DataManager.swift */; };
+		A685F97821E4A37700413AFD /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A685F97621E4A36500413AFD /* DataManager.swift */; };
 		BF1402EFDF2618BF41B5F010 /* Pods_QueueTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BC90447C5BD1D52493CAC5C /* Pods_QueueTime.framework */; };
 		C2288601219AD14800537767 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C2288600219AD14800537767 /* GoogleService-Info.plist */; };
 		C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */; };
@@ -82,11 +83,11 @@
 		7242495921A5F8D3002FD4A1 /* walkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walkthroughPageViewController.swift; sourceTree = "<group>"; };
 		7242495B21A600B4002FD4A1 /* walkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = walkthroughViewController.swift; sourceTree = "<group>"; };
 		7242495D21A612B1002FD4A1 /* onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = onboarding.storyboard; sourceTree = "<group>"; };
-		A61B201A21A4455200290389 /* notificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notificationViewController.swift; sourceTree = "<group>"; };
 		A67597F721AE9DED00215A8C /* QueueTime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QueueTime.entitlements; sourceTree = "<group>"; };
 		A67597FC21AEA4B900215A8C /* QueueTime Siri.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "QueueTime Siri.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67597FE21AEA4B900215A8C /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		A675980021AEA4B900215A8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A685F97621E4A36500413AFD /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataManager.swift; path = ../../../Downloads/DataManager.swift; sourceTree = "<group>"; };
 		B4E79C5A758E6298821D30F4 /* Pods_QueueTimeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QueueTimeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2288600219AD14800537767 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C22C28A1219AFA6B00C3F800 /* signUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpViewController.swift; sourceTree = "<group>"; };
@@ -217,8 +218,8 @@
 				C2B6969A21AD9A220043A7F7 /* Main.storyboard */,
 				C23FA02C2191C124006BBE2D /* ViewController.swift */,
 				7242495D21A612B1002FD4A1 /* onboarding.storyboard */,
-				A61B201A21A4455200290389 /* notificationViewController.swift */,
 				60C3BE14219C175500D93CC1 /* profileViewController.swift */,
+				A685F97621E4A36500413AFD /* DataManager.swift */,
 				C22C28A3219AFDF300C3F800 /* loginViewController.swift */,
 				7242495721A5F6CE002FD4A1 /* walkthroughContentViewController.swift */,
 				7242495921A5F8D3002FD4A1 /* walkthroughPageViewController.swift */,
@@ -352,6 +353,12 @@
 						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 							com.apple.Siri = {
@@ -541,6 +548,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A67597FF21AEA4B900215A8C /* IntentHandler.swift in Sources */,
+				A685F97821E4A37700413AFD /* DataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,10 +557,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				72361216219AE48E00FD832B /* locationViewController.swift in Sources */,
+				A685F97721E4A36500413AFD /* DataManager.swift in Sources */,
 				C23FA02D2191C124006BBE2D /* ViewController.swift in Sources */,
 				C22C28A2219AFA6B00C3F800 /* signUpViewController.swift in Sources */,
 				7242495821A5F6CE002FD4A1 /* walkthroughContentViewController.swift in Sources */,
-				A61B201B21A4455200290389 /* notificationViewController.swift in Sources */,
 				60C3BE15219C175500D93CC1 /* profileViewController.swift in Sources */,
 				C28AE5F521B4A01500AFA74B /* CallViewController.m in Sources */,
 				C23FA02B2191C124006BBE2D /* AppDelegate.swift in Sources */,
